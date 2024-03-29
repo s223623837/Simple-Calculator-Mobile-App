@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Simple Calculator Application</string>
+    <string name="add_button_label">Add</string>
+    <string name="subtract_button_label">Subtract</string>
+</resources>
