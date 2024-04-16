@@ -1,49 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:padding="16dp"
+    android:gravity="center">
 
     <EditText
-        android:id="@+id/firstValueEditText"
-        android:layout_width="wrap_content"
+        android:id="@+id/inputEditText"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_centerHorizontal="true"
-        android:hint="Enter first value"
-        android:inputType="numberDecimal" />
+        android:layout_marginBottom="16dp"
+        android:hint="0"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:background="@drawable/edit_text_background" />
 
-    <EditText
-        android:id="@+id/secondValueEditText"
-        android:layout_width="wrap_content"
+    <!-- Row 1: Buttons 7, 8, 9, Subtract (-) -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/firstValueEditText"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
-        android:hint="Enter second value"
-        android:inputType="numberDecimal" />
+        android:orientation="horizontal"
+        android:gravity="center">
 
-    <Button
-        android:id="@+id/addButton"
-        android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/button7"
+            style="@style/CalculatorButton"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/button8"
+            style="@style/CalculatorButton"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/button9"
+            style="@style/CalculatorButton"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/subtractButton"
+            style="@style/CalculatorButton"
+            android:text="-" />
+    </LinearLayout>
+
+    <!-- Row 2: Buttons 4, 5, 6, Add (+) -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/secondValueEditText"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
-        android:text="@string/add_button_label"
-        android:background="@color/button_background"
-        android:textColor="@color/button_text" />
+        android:orientation="horizontal"
+        android:gravity="center">
 
-    <Button
-        android:id="@+id/subtractButton"
-        android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/button4"
+            style="@style/CalculatorButton"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/button5"
+            style="@style/CalculatorButton"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/button6"
+            style="@style/CalculatorButton"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/addButton"
+            style="@style/CalculatorButton"
+            android:text="+" />
+    </LinearLayout>
+
+    <!-- Row 3: Buttons 1, 2, 3, Multiply (*) -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/addButton"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
-        android:text="@string/subtract_button_label"
-        android:background="@color/button_background"
-        android:textColor="@color/button_text" />
+        android:orientation="horizontal"
+        android:gravity="center">
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/button1"
+            style="@style/CalculatorButton"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/button2"
+            style="@style/CalculatorButton"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/button3"
+            style="@style/CalculatorButton"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/multiplyButton"
+            style="@style/CalculatorButton"
+            android:text="*" />
+    </LinearLayout>
+
+    <!-- Row 4: Button 0, Decimal (.), Divide (/), Equals (=) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/button0"
+            style="@style/CalculatorButton"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/decimalButton"
+            style="@style/CalculatorButton"
+            android:text="." />
+
+        <Button
+            android:id="@+id/divideButton"
+            style="@style/CalculatorButton"
+            android:text="/" />
+
+        <Button
+            android:id="@+id/equalButton"
+            style="@style/CalculatorButton"
+            android:text="=" />
+    </LinearLayout>
+
+</LinearLayout>
